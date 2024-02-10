@@ -1,38 +1,673 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex {
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.grid {
+    display: grid;
 }
 
-.App-link {
-  color: #61dafb;
+.spaceBtw {
+    justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* NAV STARTS HERE */
+
+nav {
+    background-color: #ffffff;
+    color: #000000;
 }
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-link,
+.nav-logo {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+}
+
+.nav input {
+    width: 450px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    outline: none;
+}
+
+.nav .searchBtn {
+    padding-left: 15px;
+}
+
+.nav button {
+    background-color: #E07E1B;
+    padding: 10px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul div {
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAV ENDS HERE */
+
+
+/* HOME STARTS HERE */
+
+.home {
+    height: auto;
+    background-color: #20AC76;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.home-link {
+    text-decoration: none;
+    color: #343436;
+}
+
+.homeMain {
+    background-image: url(./img/BG.png);
+    height: 100vh;
+    height: auto;
+    background-repeat: no-repeat;
+    background-color: #20AC76;
+    background-size: auto;
+    background-position: inherit;
+    background-position-y: top;
+    padding-bottom: 80px;
+}
+
+.home .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home li {
+    padding: 7px 0;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    bottom: 300%;
+    z-index: 99;
+}
+
+.row1 {
+    padding-top: 25px;
+}
+
+.row1 .left {
+    align-items: center;
+    background-color: #ffffff;
+    color: #343436;
+    font-size: 12px;
+    padding: 20px 80px 20px 10px;
+    border-radius: 5px;
+}
+
+/* ROW 2 HERE */
+
+.row2 {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+    color: #343436;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.row2 .box {
+    background-color: #F5F5F5;
+}
+
+.row2 img {
+    border-radius: 5px;
+    width: 180px;
+    height: 140px;
+}
+
+.row2 p {
+    padding: 5px 0;
+}
+
+
+/* ROW 6 HERE */
+
+.row6 {
+    background-color: #ffffff;
+    padding: 8px;
+}
+
+.row6 .items {
+    gap: 5px;
+    justify-content: space-around;
+    color: #343436;
+}
+
+.row6 .label {
+    background-color: #FFC108;
+    border-radius: 5px 5px 0px 0px;
+    /* padding: 8px; */
+    color: #000000;
+    justify-content: space-between;
+}
+
+.row6 img {
+    border-radius: 5px;
+    width: 572px;
+}
+
+
+/* ROW DEALS HERE */
+
+.rowDeals {
+    background-color: #ffffff;
+}
+
+.rowDeals img {
+    border-radius: 5px;
+    width: 183px;
+}
+
+.rowDeals p {
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.rowDeals .items {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    color: #343436;
+    padding: 20px;
+}
+
+.rowDeals span {
+    color: #343436;
+    font-size: 13px;
+    text-decoration: line-through;
+}
+
+.redLabel {
+    background-color: #E61601;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 25px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.yellowLabel {
+    background-color: #FFC108;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 25px;
+    color: #000000;
+    justify-content: space-between;
+}
+
+
+.navyLabel {
+    background-color: #276076;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 25px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.greenLabel {
+    background-color: #478118;
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px 25px;
+    color: #ffffff;
+    justify-content: space-between;
+}
+
+.redLabel p,
+.yellowLabel p,
+.navyLabel p,
+.greenLabel p {
+    font-size: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.txt p {
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.txt h5 {
+    padding: 8px 0;
+}
+
+.txt h3 {
+    padding: 8px 0;
+}
+
+.txt span {
+    text-decoration: underline;
+    font: 700;
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* HOME ENDS HERE */
+
+
+
+
+
+
+
+
+.pages {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.row {
+    padding: 25px;
+}
+
+.pages h2 {
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+
+.pages button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+
+/* FOOTER STARTS HERE */
+
+
+
+.footerTop {
+    background-color: #313133;
+    color: #eaeaea;
+    height: 25vh;
+}
+
+.footerMail,
+.footerMail .btn {
+    align-items: center;
+    gap: 10px;
+}
+
+.footerMail input {
+    margin: 10px 0;
+    padding: 15px 24px 15px 48px;
+    width: 250px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.footerMail .btn {
+    gap: 10px;
+}
+
+.footerBottom {
+    background-color: #535357;
+    color: #eaeaea;
+    height: 70vh;
+}
+
+.footerTop .inside {
+    padding: 40px 0px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #313133;
+    justify-content: space-between;
+}
+
+.footerTop .inside p {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.footerBottom .inside {
+    padding: 40px 0px 20px 0px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #535357;
+}
+
+.foot-link,
+.socialsLink {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footLink {
+    text-decoration: none;
+    color: #E7E7E8;
+}
+
+.footerBottom .inside li {
+    font-size: 12px;
+    line-height: 8px;
+}
+
+.footerBottom .top {
+    justify-content: space-between;
+    align-items: first baseline;
+}
+
+.footerBottom .top .topic,
+.otherNotes .topic {
+    padding-bottom: 12px;
+    font-weight: 800;
+    font-size: 11px;
+}
+
+.footerBottom .top .padded {
+    padding-top: 30px;
+}
+
+.footerDownload {
+    line-height: 4px;
+    padding-top: 15px;
+}
+
+.get {
+    align-items: center;
+    gap: 5px;
+}
+
+.right .foot-link p {
+    font-size: 8px;
+}
+
+.foot-link .icon {
+    font-size: 20px;
+}
+
+.foot-link .text .bold {
+    font-size: 12px;
+}
+
+.getApp {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.footerBottom .bottom {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.socials {
+    column-gap: 15px;
+    align-items: center;
+    font-size: 30px;
+}
+
+/* FOOTER ENDS HERE */
+
+
+/* ACCOUNT STARTS HERE */
+
+.account {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    /* background-color: #276076; */
+}
+
+.account input {
+    width: 450px;
+    padding: 10px;
+    border: 1px solid #E07E1B;
+    border-radius: 5px;
+    height: 60px;
+    outline: 1px solid #E07E1B
+}
+
+.account .div {
+    padding: 15px 0px;
+}
+
+.account p,
+.account h3 {
+    padding: 15px 0px;
+    width: 70%;
+    margin: auto;
+}
+
+.account .facebook {
+    padding-top: 50px;
+}
+
+.account .img {
+    padding: 10px 0px;
+}
+
+.account .continue,
+.account .facebookBtn {
+    width: 450px;
+}
+
+/* ACCOUNT ENDS HERE */
+
+/* CART PAGE STARTS HERE */
+
+.cart {
+    background-color: #f1f1f2;
+}
+
+.cartCards {
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardsRight {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardsRight p {
+    font-size: 14px;
+}
+
+.cardsRight .txt {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spanTxt {
+    font-size: 12px;
+    padding-top: 8px;
+    color: #535357;
+}
+
+
+.cartReturn p {
+    font-size: 12px;
+    padding-top: 8px;
+}
+
+.cartDetails {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cartSummary,
+.cartReturn {
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.cartActions {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.trash button {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    color: #E07E1B;
+}
+
+.trash button p {
+    padding-left: 7px;
+}
+
+.cartBtn {
+    width: 20%;
+    align-items: center;
+}
+
+.cartBtn button {
+    color: #ffffff;
+    background-color: #E07E1B;
+    border: none;
+    font-size: 20px;
+    padding: 7px;
+    font-weight: 600;
+}
+
+.h3 {
+    padding-bottom: 7px;
+    font-size: 25px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.h4 {
+    padding-bottom: 7px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.cartDetails {
+    background-color: #ffffff;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.checkout {
+    width: 100%;
+}
+
+.cartDetails img {
+    height: 80px;
+}
+
+.mainItem {
+    gap: 20px;
+}
+
+.cartItem .item {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0px 10px 0px;
+}
+
+.mainItem p {
+    font-size: 14px;
+    width: 85%;
+    padding-bottom: 5px;
+}
+
+.span {
+    color: #535357;
+}
+
+.express {
+    color: #E07E1B;
+}
+
+.jumia {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* CART PAGE ENDS HERE */
+
+/* HOVER STARTS HERE */
+
+.home-link:hover,
+.nav-link:hover,
+.socialsLink:hover {
+    color: #E07E1B;
+}
+
+.footLink:hover {
+    text-decoration: underline;
+}
+
+.getApp:hover {
+    border: 1px solid #E07E1B;
+    color: #E07E1B;
+}
+
+.get:hover {
+    color: #E07E1B;
+}
+
+.genderBtn:hover {
+    color: #E07E1B !important;
+    border: 1px solid #E07E1B !important;
+}
+
+.trash button:hover {
+    background-color: #eabe92;
+}
+
+/* HOVER ENDS HERE */
